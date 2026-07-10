@@ -4,27 +4,29 @@ This document contains useful commands for inspecting, debugging, and managing P
 
 > **Note:** Most commands below are intended for **Windows Command Prompt (CMD)**. Commands specifically intended for **Git Bash** are marked separately.
 
+<a id="table-of-contents"></a>
 ## 📑 Table of Contents
 
-1. [🔍 Search for Text Inside Project Files](#1-search-for-text-inside-project-files)
-2. [🌳 View the Project Structure](#2-view-the-project-structure)
-3. [📂 Navigate Through the Project](#3-navigate-through-the-project)
-4. [📄 View File Contents](#4-view-file-contents)
-5. [🐍 Python Environment Commands](#5-python-environment-commands)
-6. [▶️ Run and Debug Python Files](#6-run-and-debug-python-files)
-7. [🌐 Flask Debugging Commands](#7-flask-debugging-commands)
-8. [🛠️ Check for Common Python Project Problems](#8-check-for-common-python-project-problems)
-9. [📜 Git Status and History Commands](#9-git-status-and-history-commands)
-10. [⬆️ Git Add, Commit, and Push Commands](#10-git-add-commit-and-push-commands)
-11. [🕒 Find Recently Changed Files](#11-find-recently-changed-files)
-12. [🔌 Check Network Ports](#12-check-network-ports)
-13. [🧹 Clear Python Cache Files](#13-clear-python-cache-files)
-14. [🩺 Useful Combined Debugging Workflow](#14-useful-combined-debugging-workflow)
-15. [⚡ Quick Command Reference](#15-quick-command-reference)
+1. [🔍 Search for Text Inside Project Files](#search-text)
+2. [🌳 View the Project Structure](#project-structure)
+3. [📂 Navigate Through the Project](#navigation)
+4. [📄 View File Contents](#file-contents)
+5. [🐍 Python Environment Commands](#python-environment)
+6. [▶️ Run and Debug Python Files](#python-debugging)
+7. [🌐 Flask Debugging Commands](#flask-debugging)
+8. [🛠️ Check for Common Python Project Problems](#python-problems)
+9. [📜 Git Status and History Commands](#git-history)
+10. [⬆️ Git Add, Commit, and Push Commands](#git-workflow)
+11. [🕒 Find Recently Changed Files](#changed-files)
+12. [🔌 Check Network Ports](#network-ports)
+13. [🧹 Clear Python Cache Files](#python-cache)
+14. [🩺 Useful Combined Debugging Workflow](#debugging-workflow)
+15. [⚡ Quick Command Reference](#quick-reference)
 16. [💡 Tips](#tips)
 
 ---
 
+<a id="search-text"></a>
 ## 1. 🔍 Search for Text Inside Project Files
 
 ### Search inside all Python files
@@ -123,10 +125,11 @@ findstr /S /N /I "search_text" *.*
 
 Use carefully because this may also search unnecessary files.
 
-[⬆️ Back to Table of Contents](#-table-of-contents)
+[⬆️ Back to Table of Contents](#table-of-contents)
 
 ---
 
+<a id="project-structure"></a>
 ## 2. 🌳 View the Project Structure
 
 ### Display the complete project tree
@@ -185,10 +188,11 @@ dir /AD /B
 dir /A-D /B
 ```
 
-[⬆️ Back to Table of Contents](#-table-of-contents)
+[⬆️ Back to Table of Contents](#table-of-contents)
 
 ---
 
+<a id="navigation"></a>
 ## 3. 📂 Navigate Through the Project
 
 ### Show the current directory
@@ -227,10 +231,11 @@ explorer .
 code .
 ```
 
-[⬆️ Back to Table of Contents](#-table-of-contents)
+[⬆️ Back to Table of Contents](#table-of-contents)
 
 ---
 
+<a id="file-contents"></a>
 ## 4. 📄 View File Contents
 
 ### Display a file
@@ -263,10 +268,11 @@ type app.py | findstr /I "register_blueprint"
 findstr /N "^" app.py
 ```
 
-[⬆️ Back to Table of Contents](#-table-of-contents)
+[⬆️ Back to Table of Contents](#table-of-contents)
 
 ---
 
+<a id="python-environment"></a>
 ## 5. 🐍 Python Environment Commands
 
 ### Check Python version
@@ -337,10 +343,11 @@ pip freeze > requirements.txt
 pip list --outdated
 ```
 
-[⬆️ Back to Table of Contents](#-table-of-contents)
+[⬆️ Back to Table of Contents](#table-of-contents)
 
 ---
 
+<a id="python-debugging"></a>
 ## 6. ▶️ Run and Debug Python Files
 
 ### Run the application
@@ -389,10 +396,11 @@ Useful for debugging import errors.
 python -c "import sys; print('\n'.join(sys.path))"
 ```
 
-[⬆️ Back to Table of Contents](#-table-of-contents)
+[⬆️ Back to Table of Contents](#table-of-contents)
 
 ---
 
+<a id="flask-debugging"></a>
 ## 7. 🌐 Flask Debugging Commands
 
 ### Run a Flask application
@@ -445,10 +453,11 @@ findstr /S /N /I "register_blueprint" *.py
 findstr /S /N /I "dashboard.home" *.py *.html
 ```
 
-[⬆️ Back to Table of Contents](#-table-of-contents)
+[⬆️ Back to Table of Contents](#table-of-contents)
 
 ---
 
+<a id="python-problems"></a>
 ## 8. 🛠️ Check for Common Python Project Problems
 
 ### Find function definitions
@@ -487,10 +496,11 @@ findstr /S /N /I "SELECT INSERT UPDATE DELETE" *.py
 findstr /S /N /I "except" *.py
 ```
 
-[⬆️ Back to Table of Contents](#-table-of-contents)
+[⬆️ Back to Table of Contents](#table-of-contents)
 
 ---
 
+<a id="git-history"></a>
 ## 9. 📜 Git Status and History Commands
 
 ### Check repository status
@@ -565,10 +575,11 @@ git config --global user.email "your-email@example.com"
 git config --list
 ```
 
-[⬆️ Back to Table of Contents](#-table-of-contents)
+[⬆️ Back to Table of Contents](#table-of-contents)
 
 ---
 
+<a id="git-workflow"></a>
 ## 10. ⬆️ Git Add, Commit, and Push Commands
 
 ### Add all changes
@@ -604,10 +615,11 @@ git commit -m "Update project"
 git push
 ```
 
-[⬆️ Back to Table of Contents](#-table-of-contents)
+[⬆️ Back to Table of Contents](#table-of-contents)
 
 ---
 
+<a id="changed-files"></a>
 ## 11. 🕒 Find Recently Changed Files
 
 ### Using Git
@@ -635,10 +647,11 @@ git show --name-only --oneline HEAD
 git diff --name-only COMMIT1 COMMIT2
 ```
 
-[⬆️ Back to Table of Contents](#-table-of-contents)
+[⬆️ Back to Table of Contents](#table-of-contents)
 
 ---
 
+<a id="network-ports"></a>
 ## 12. 🔌 Check Network Ports
 
 ### Check whether port 5000 is in use
@@ -663,10 +676,11 @@ taskkill /PID 12345 /F
 
 Use this when Flask reports that the port is already in use.
 
-[⬆️ Back to Table of Contents](#-table-of-contents)
+[⬆️ Back to Table of Contents](#table-of-contents)
 
 ---
 
+<a id="python-cache"></a>
 ## 13. 🧹 Clear Python Cache Files
 
 ### Delete all `__pycache__` folders
@@ -683,10 +697,11 @@ del /S /Q *.pyc
 
 Useful when old cached Python files cause unexpected behavior.
 
-[⬆️ Back to Table of Contents](#-table-of-contents)
+[⬆️ Back to Table of Contents](#table-of-contents)
 
 ---
 
+<a id="debugging-workflow"></a>
 ## 14. 🩺 Useful Combined Debugging Workflow
 
 When a Flask application produces an error, use the following workflow:
@@ -710,10 +725,11 @@ Recommended order:
 5. Check Python syntax.
 6. Run the application again.
 
-[⬆️ Back to Table of Contents](#-table-of-contents)
+[⬆️ Back to Table of Contents](#table-of-contents)
 
 ---
 
+<a id="quick-reference"></a>
 ## 15. ⚡ Quick Command Reference
 
 | Task | Command |
@@ -733,10 +749,11 @@ Recommended order:
 | View commit history | `git log --oneline` |
 | Check port 5000 | `netstat -ano \| findstr :5000` |
 
-[⬆️ Back to Table of Contents](#-table-of-contents)
+[⬆️ Back to Table of Contents](#table-of-contents)
 
 ---
 
+<a id="tips"></a>
 ## 💡 Tips
 
 - Run commands from the **project root directory**.
@@ -747,4 +764,4 @@ Recommended order:
 - Avoid including `.venv`, `node_modules`, and `__pycache__` when sharing project structures.
 - Never commit passwords, API keys, secret keys, or `.env` files to Git.
 
-[⬆️ Back to Table of Contents](#-table-of-contents)
+[⬆️ Back to Table of Contents](#table-of-contents)
